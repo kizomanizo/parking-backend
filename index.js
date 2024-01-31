@@ -10,7 +10,7 @@ const port = process.env.PORT || 4003;
 
 // App Configuration Entries
 App.disable("x-powered-by");
-App.use(cors({ exposedHeaders: ["x-auth-token"] }));
+App.use(cors());
 App.use(Express.urlencoded({ extended: true }));
 
 App.get("/:regNumber", async function (req, res) {
