@@ -31,10 +31,10 @@ App.get("/:regNumber", async function (req, res) {
     const response = termisResponse.data;
     if (!response.status) {
       console.log("No bills found!", regNumber.value);
-      res.status(404).json({
+      res.status(200).json({
         success: false,
         status: false,
-        data: "",
+        data: null,
       });
     } else {
       res.status(200).json({
@@ -48,7 +48,7 @@ App.get("/:regNumber", async function (req, res) {
     res.status(400).json({
       success: false,
       status: false,
-      data: "",
+      data: error.message,
     });
   }
 });
