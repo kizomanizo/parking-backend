@@ -34,7 +34,7 @@ App.get("/:regNumber", async function (req, res) {
       res.status(200).json({
         success: false,
         status: false,
-        data: null,
+        data: "",
       });
     } else {
       res.status(200).json({
